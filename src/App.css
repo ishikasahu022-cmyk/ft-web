@@ -1,0 +1,269 @@
+/* App.css */
+.dashboard-container {
+  min-height: 100vh;
+  background-color: #f4f6f8;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #111827;
+  color: white;
+  z-index: 1000;
+  height: 80px;
+  border-bottom: 1px solid #eaecef;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #111827;
+  color: white;
+  position: fixed;
+  top: 80px;
+  bottom: 60px;
+  padding: 1rem;
+}
+
+.sidebar-link {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.content-area {
+  margin-left: 250px;
+  padding-top: 1rem;
+  padding: 6rem 2rem;
+}
+
+.card {
+  padding: 1rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.progress-container {
+  margin-top: 1rem;
+}
+
+.progress {
+  height: 20px;
+}
+
+.progress-bar {
+  background-color: #FFC107;
+}
+
+.charts-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.chart-card {
+  width: 48%;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #111827;
+  color: white;
+  z-index: 1000;
+  height: 60px;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* ================= AUTH SHARED STYLES ================= */
+
+.auth-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f6f8;
+}
+
+.auth-card {
+  width: 920px;
+  display: flex;
+  background: #ffffff;
+  border: 1px solid #eaecef;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* LEFT PANEL */
+.auth-left {
+  width: 40%;
+  background-color: #111827;
+  color: white;
+  padding: 40px;
+}
+
+.auth-left h4 {
+  font-weight: 600;
+}
+
+.auth-left p {
+  margin-top: 12px;
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+.auth-features {
+  margin-top: 40px;
+}
+
+.auth-features div {
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.auth-tagline {
+  margin-top: 40px;
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+/* RIGHT PANEL */
+.auth-right {
+  width: 60%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.auth-title {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.auth-subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 25px;
+}
+
+/* FORM */
+.auth-form label {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  outline: none;
+  margin-top: 5px;
+}
+
+.auth-form input:focus {
+  border-color: #111827;
+}
+
+/* ROW (for register password fields) */
+.auth-row {
+  display: flex;
+  gap: 15px;
+}
+
+/* BUTTON */
+.auth-btn {
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #111827;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.auth-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* FOOTER */
+.auth-footer {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.auth-footer span {
+  color: #111827;
+  cursor: pointer;
+}
+
+.table thead th {
+  font-size: 13px;
+  color: #6b7280;
+  font-weight: 600;
+  border-bottom: 1px solid #eaecef;
+}
+
+.table tbody td {
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #111827;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.txn-toggle-modal {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.txn-toggle-modal button {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.txn-toggle-modal button.active.expense {
+  background: #ef4444;
+  color: white;
+  border: none;
+}
+
+.txn-toggle-modal button.active.income {
+  background: #22c55e;
+  color: white;
+  border: none;
+}
