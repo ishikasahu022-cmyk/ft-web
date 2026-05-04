@@ -91,9 +91,27 @@ const Transaction = () => {
         setShow(true);
     }, []);
 
-    const exportPdf = async () => {
-        const { data } = await axiosInstance.get("/finance/export-pdf");
-        console.log('data == ',data);
+   const exportPdf = async () => {
+        try {
+            const { data } = await axiosInstance.get("/finance/export-pdf");
+            const URL = `${process.env.REACT_APP_API_BASE_URL}${data?.url}`
+            console.log('data == ', URL);
+            const response = await fetch(URL);
+            const blob = await response.blob();
+
+            const url = window.URL.createObjectURL(blob);
+            const link = document.createElement('a');
+
+            link.href = url;
+            link.download = "transcations.pdf";
+            document.body.appendChild(link);
+            link.click();
+            link.remove();
+            window.URL.revokeObjectURL(url);
+        }
+        catch (err) {
+            console.error(err);
+        }
     }
 
     const closeModal = useCallback(() => {
